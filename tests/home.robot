@@ -1,19 +1,12 @@
 *** Settings ***
-Library    AppiumLibrary
+Resource    ../Resources/home.resource
+
+Test Setup    Abrir aplicativo
+Test Teardown    Fechar aplicativo
 
 *** Test Cases ***
 
-Deve abrir a tela principal
-    Open Application    http://localhost:4723
-    ...                 platformName=Android
-    ...                 deviceName=Android Emulator
-    ...                 automationName=UIAutomator2
-    ...                 app=${EXECDIR}/app/yodapp-beta.apk
-    ...                 udid=emulator-5554
-    ...                 autoGrantPermissions=true
-
-    Wait Until Page Contains    Yodapp
-    Wait Until Page Contains    Mobile Training
-    Wait Until Page Contains    by Papito
-
-    Close Application
+Cenário: Abrir o aplicativo com sucesso
+    DADO que estou na página inicial do aplicativo Yodapp
+    QUANDO clico no botão "QAX"
+    ENTÃO devo ser redirecionado para a tela "Clique em Botões"

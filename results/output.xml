@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.12 on win32)" generated="2026-02-09T13:36:14.963812" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="G:\felip_000\Documents\PROJETOS\Cursos\Appium\QAx\projects\robot-yodapp\tests">
-<suite id="s1-s1" name="Home" source="G:\felip_000\Documents\PROJETOS\Cursos\Appium\QAx\projects\robot-yodapp\tests\home.robot">
-<test id="s1-s1-t1" name="Deve abrir a tela principal" line="6">
+<robot generator="Robot 7.2.2 (Python 3.13.12 on win32)" generated="2026-02-09T15:19:26.707770" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="G:\felip_000\Documents\PROJETOS\Cursos\Appium\QAx\projects\robot-yodapp\Tests">
+<suite id="s1-s1" name="Home" source="G:\felip_000\Documents\PROJETOS\Cursos\Appium\QAx\projects\robot-yodapp\Tests\home.robot">
+<test id="s1-s1-t1" name="Cenário: Abrir o aplicativo com sucesso" line="9">
+<kw name="Abrir aplicativo" owner="geral" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://localhost:4723</arg>
 <arg>platformName=Android</arg>
@@ -17,32 +18,47 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-02-09T13:36:15.155492" elapsed="5.439570"/>
+<status status="PASS" start="2026-02-09T15:19:26.900409" elapsed="5.695062"/>
 </kw>
+<status status="PASS" start="2026-02-09T15:19:26.900128" elapsed="5.695425"/>
+</kw>
+<kw name="DADO que estou na página inicial do aplicativo Yodapp" owner="home">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>Yodapp</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-02-09T13:36:20.595277" elapsed="5.164166"/>
+<status status="PASS" start="2026-02-09T15:19:32.596180" elapsed="5.181187"/>
 </kw>
+<status status="PASS" start="2026-02-09T15:19:32.595995" elapsed="5.181443"/>
+</kw>
+<kw name="QUANDO clico no botão &quot;QAX&quot;" owner="home" source_name="QUANDO clico no botão &quot;${NOME_TEXTO}&quot;">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2026-02-09T15:19:47.596340" level="INFO">xpath criteria: //android.widget.Button[@text="QAX"]</msg>
+<arg>//android.widget.Button[@text="${NOME_TEXTO}"]</arg>
+<doc>Taps the ``element`` for ``count`` times over the ``duration``. </doc>
+<status status="PASS" start="2026-02-09T15:19:37.777810" elapsed="9.818584"/>
+</kw>
+<status status="PASS" start="2026-02-09T15:19:37.777646" elapsed="9.818796"/>
+</kw>
+<kw name="ENTÃO devo ser redirecionado para a página &quot;Clique em Botões&quot;" owner="home" source_name="ENTÃO devo ser redirecionado para a página &quot;${TITULO_PAGINA}&quot;">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Mobile Training</arg>
+<arg>${TITULO_PAGINA}</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-02-09T13:36:25.759638" elapsed="2.056043"/>
+<status status="PASS" start="2026-02-09T15:19:47.596798" elapsed="2.077158"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>by Papito</arg>
-<doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-02-09T13:36:27.815879" elapsed="2.086626"/>
+<status status="PASS" start="2026-02-09T15:19:47.596642" elapsed="2.077372"/>
 </kw>
+<kw name="Fechar aplicativo" owner="geral" type="TEARDOWN">
 <kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-02-09T13:36:29.902665" elapsed="2.340895"/>
+<status status="PASS" start="2026-02-09T15:19:49.674359" elapsed="2.342132"/>
 </kw>
-<status status="PASS" start="2026-02-09T13:36:15.154989" elapsed="17.088896"/>
+<status status="PASS" start="2026-02-09T15:19:49.674223" elapsed="2.342395"/>
+</kw>
+<status status="PASS" start="2026-02-09T15:19:26.899723" elapsed="25.117110"/>
 </test>
-<status status="PASS" start="2026-02-09T13:36:14.983113" elapsed="17.261357"/>
+<status status="PASS" start="2026-02-09T15:19:26.726409" elapsed="25.291128"/>
 </suite>
-<status status="PASS" start="2026-02-09T13:36:14.965361" elapsed="17.279717"/>
+<status status="PASS" start="2026-02-09T15:19:26.708988" elapsed="25.309234"/>
 </suite>
 <statistics>
 <total>
